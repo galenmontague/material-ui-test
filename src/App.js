@@ -1,23 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Button from '@material-ui/core/Button';
+import Paper from '@material-ui/core/Paper';
+import SimpleTable from './components/SimpleTable';
+import EditableTable from './components/EditableTable';
+import BasicTreeData from './components/TreeTable';
+import IntegrationAutosuggest from './components/AutoCompleteSearch';
+import AutoSuggestBasicExample from './components/AutoSuggestBasicExample';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          testing
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Button variant="contained" color="secondary">
+          Secondary Button
+        </Button>
+        <Paper>
+          <IntegrationAutosuggest />
+        </Paper>
+        <div>
+          <AutoSuggestBasicExample /> 
+        </div>
+        <div>
+          <SimpleTable />
+        </div>
+        <div>
+          <EditableTable />
+        </div>
+        <div>
+          <BasicTreeData />
+        </div>
+
       </header>
     </div>
   );
